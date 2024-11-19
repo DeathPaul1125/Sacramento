@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <group name="data" numcolumns="12">
+            <column name="id" display="none" order="140">
+                <widget type="text" fieldname="id" readonly="true"/>
+            </column>
+            <column name="cliente" order="115" numcolumns="2">
+                <widget type="select" fieldname="cliente" required="true">
+                    <values source="clientes" fieldcode="codcliente" fieldtitle="nombre"/>
+                </widget>
+            </column>
+            <column name="colonia" display="left" order="100" numcolumns="2">
+                <widget type="select" fieldname="colonia">
+                    <values source="colonias" fieldcode="id" fieldtitle="nombre"/>
+                </widget>
+            </column>
+            <column name="codlote" display="left" order="110" numcolumns="2">
+                <widget type="text" fieldname="codlote"/>
+            </column>
+            <column name="codrecibo" display="none" order="120">
+                <widget type="text" fieldname="codrecibo"/>
+            </column>
+            <column name="fecha" display="left" order="115" numcolumns="2">
+                <widget type="date" fieldname="fecha"/>
+            </column>
+            <column name="tipopago" display="left" order="120" numcolumns="2">
+                <widget type="select" fieldname="tipo">
+                    <values title="Amortizacion">1</values>
+                    <values title="Instalacion de Agua">2</values>
+                    <values title="Pago de Escritura">3</values>
+                    <values title="Cancelacion Total del lote">4</values>
+                    <values title="Reposicion del contador">5</values>
+                    <values title="Suspension del servicio de agua">6</values>
+                    <values title="Habilitacion del servicio de agua">7</values>
+                    <values title="Instalacion de Energia Electrica">8</values>
+                    <values title="Remedida de Lote">9</values>
+                    <values title="Sesion de dereechos">10</values>
+                    <values title="Cargos">11</values>
+                    <values title="Abonos">12</values>
+                </widget>
+            </column>
+            <column name="total" display="left" order="130" numcolumns="2">
+                <widget type="number" fieldname="total" readonly="true"/>
+            </column>
+            <column name="notas" display="left" order="150" numcolumns="12">
+                <widget type="textarea" fieldname="notas"/>
+            </column>
+        </group>
+        <group name="logs" numcolumns="12">
+            <column name="creation-date" display="none" order="100">
+                <widget type="datetime" fieldname="creation_date" required="true"/>
+            </column>
+            <column name="user" order="110" display="none">
+                <widget type="select" fieldname="nick" >
+                    <values source="users" fieldcode="nick" fieldtile="nick"/>
+                </widget>
+            </column>
+            <column name="last-update" display="none" order="120">
+                <widget type="datetime" fieldname="last_update"/>
+            </column>
+            <column name="last-user" order="130" display="none">
+                <widget type="select" fieldname="last_nick" >
+                    <values source="users" fieldcode="nick" fieldtile="nick"/>
+                </widget>
+            </column>
+        </group>
+    </columns>
+</view>

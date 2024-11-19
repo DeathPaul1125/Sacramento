@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <column name="id" display="none" order="190">
+            <widget type="text" fieldname="id" readonly="true"/>
+        </column>
+        <column name="codlote" display="left" order="100">
+            <widget type="text" fieldname="codlote" maxlength="50" required="true"/>
+        </column>
+        <column name="cliente" display="left" order="110" numcolumns="12">
+            <widget type="select" fieldname="cliente" required="true">
+                <values source="clientes" fieldcode="codcliente" fieldtitle="nombre"/>
+            </widget>
+        </column>
+        <column name="costolote" display="left" order="120">
+            <widget type="number" fieldname="costolote"/>
+        </column>
+    </columns>
+</view>

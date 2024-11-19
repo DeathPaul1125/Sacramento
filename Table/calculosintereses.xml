@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+    <column>
+        <name>codlote</name>
+        <type>character varying(50)</type>
+    </column>
+    <column>
+        <name>costolote</name>
+        <type>double precision</type>
+    </column>
+    <column>
+        <name>creation_date</name>
+        <type>timestamp</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>cuota</name>
+        <type>double precision</type>
+    </column>
+    <column>
+        <name>cuotas</name>
+        <type>integer</type>
+    </column>
+    <column>
+        <name>colonia</name>
+        <type>integer</type>
+    </column>
+    <column>
+        <name>descuento</name>
+        <type>double precision</type>
+    </column>
+    <column>
+        <name>enganche</name>
+        <type>double precision</type>
+    </column>
+    <column>
+        <name>fechacuota</name>
+        <type>date</type>
+    </column>
+    <column>
+        <name>fondo</name>
+        <type>double precision</type>
+    </column>
+    <column>
+        <name>frente</name>
+        <type>double precision</type>
+    </column>
+    <column>
+        <name>id</name>
+        <type>serial</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>intereses</name>
+        <type>double precision</type>
+    </column>
+    <column>
+        <name>last_nick</name>
+        <type>character varying(50)</type>
+    </column>
+    <column>
+        <name>last_update</name>
+        <type>timestamp</type>
+    </column>
+    <column>
+        <name>metros2</name>
+        <type>double precision</type>
+    </column>
+    <column>
+        <name>name</name>
+        <type>character varying(100)</type>
+    </column>
+    <column>
+        <name>nick</name>
+        <type>character varying(50)</type>
+    </column>
+    <column>
+        <name>cliente</name>
+        <type>character varying(150)</type>
+    </column>
+    <column>
+        <name>cliente2</name>
+        <type>character varying(150)</type>
+    </column>
+    <column>
+        <name>preciom2</name>
+        <type>double precision</type>
+    </column>
+    <column>
+        <name>saldoconint</name>
+        <type>double precision</type>
+    </column>
+    <column>
+        <name>saldosinint</name>
+        <type>double precision</type>
+    </column>
+    <column>
+        <name>tasaint</name>
+        <type>double precision</type>
+    </column>
+    <column>
+        <name>tipoint</name>
+        <type>integer</type>
+    </column>
+    <column>
+        <name>varas2</name>
+        <type>double precision</type>
+    </column>
+    <constraint>
+        <name>calculosintereses_pkey</name>
+        <type>PRIMARY KEY (id)</type>
+    </constraint>
+    <constraint>
+        <name>ca_calculosintereses_users_last_nick</name>
+        <type>FOREIGN KEY (last_nick) REFERENCES users (nick) ON DELETE SET NULL ON UPDATE CASCADE</type>
+    </constraint>
+    <constraint>
+        <name>ca_calculosintereses_users_nick</name>
+        <type>FOREIGN KEY (nick) REFERENCES users (nick) ON DELETE SET NULL ON UPDATE CASCADE</type>
+    </constraint>
+</table>

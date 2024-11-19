@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <group name="data" numcolumns="12" title="Colonia" icon="fas fa-home">
+            <column name="id" display="none" order="90">
+                <widget type="text" fieldname="id" readonly="true"/>
+            </column>
+            <column name="codcolonia" display="left" order="95" title="Codigo" numcolumns="1">
+                <widget type="text" fieldname="codcolonia" maxlength="3" required="true"/>
+            </column>
+            <column name="nombre" display="left" order="95" title="Nombre de la Colonia" numcolumns="5">
+                <widget type="text" fieldname="nombre" maxlength="100" required="true"/>
+            </column>
+            <column name="direccion" display="left" order="100" title="Direccion" numcolumns="6">
+                <widget type="text" fieldname="direccion" maxlength="250" required="true"/>
+            </column>
+        </group>
+        <group name="config" numcolumns="12" title="Configuracion" icon="fas fa-cogs">
+            <column name="dcobro" display="left" order="100" title="Dia de cobro" numcolumns="2">
+                <widget type="number" fieldname="dcobro" max="30" min="1" step="1" required="true"/>
+            </column>
+            <column name="valm2" display="left" order="105" title="Valor x metro 3" numcolumns="2">
+                <widget type="number" fieldname="valm2"/>
+            </column>
+            <column name="interes" display="left" order="110" numcolumns="2" title="Tasa de Interes">
+                <widget type="number" fieldname="interes" required="true"/>
+            </column>
+            <column name="moraagua" display="left" order="115" title="Valor mora de Agua" numcolumns="2">
+                <widget type="number" fieldname="moraagua"/>
+            </column>
+            <column name="interesmora" display="left" order="120" title="Interes mora" numcolumns="2">
+                <widget type="number" fieldname="interesmora"/>
+            </column>
+            <column name="vexceso" display="left" order="125" title="Valor en exceso" numcolumns="2">
+                <widget type="number" fieldname="vexceso"/>
+            </column>
+            <column name="comisionv" display="left" order="130" numcolumns="2" title="Comision por Venta">
+                <widget type="number" fieldname="comisionv"/>
+            </column>
+            <column name="ultimodpago" display="left" order="235" title="Ultimo dia pago agua" numcolumns="2">
+                <widget type="number" fieldname="ultimodpago"/>
+            </column>
+            <column name="derechom3" display="left" order="140" title="Derecho Met.3/mes" numcolumns="2">
+                <widget type="number" fieldname="derechom3"/>
+            </column>
+            <column name="vagua" display="left" order="210" numcolumns="2" title="Valor de agua al mes">
+                <widget type="number" fieldname="vagua"/>
+            </column>
+            <column name="reconexion" display="left" order="215" numcolumns="2" title="Costo de Reconexion">
+                <widget type="number" fieldname="reconexion"/>
+            </column>
+        </group>
+        <group name="repre" numcolumns="12" title="Representante" icon="fa-solid fa-user-tie">
+            <column name="representante" display="left" order="100" title="Representante" numcolumns="8">
+                <widget type="text" fieldname="representante" maxlength="250" required="true"/>
+            </column>
+            <column name="cuirepresentante" display="left" order="105" title="CUI del representante" numcolumns="4">
+                <widget type="number" fieldname="cuirepresentante" required="true"/>
+            </column>
+            <column name="fnacimiento" display="left" order="110" title="fnacimiento" numcolumns="2">
+                <widget type="date" fieldname="fnacimiento" required="true"/>
+            </column>
+            <column name="edad" display="left" order="110" title="Edad" numcolumns="1">
+                <widget type="number" fieldname="edad" readonly="true"/>
+            </column>
+            <column name="estadocivil" display="left" order="115" title="Estado Civil" numcolumns="2">
+                <widget type="text" fieldname="estadocivil" required="true"/>
+            </column>
+            <column name="profesion" display="left" order="120" title="Profesion" numcolumns="3">
+                <widget type="text" fieldname="profesion" required="true"/>
+            </column>
+            <column name="cuiletras" display="none" order="125" title="cuiletras" numcolumns="12">
+                <widget type="text" fieldname="cuiletras" readonly="true"/>
+            </column>
+            <column name="edadletras" display="none" order="130" title="edadletras" numcolumns="12">
+                <widget type="text" fieldname="edadletras" readonly="true"/>
+            </column>
+        </group>
+        <group name="logs" numcolumns="12">
+            <column name="creation-date" display="none" order="100">
+                <widget type="datetime" fieldname="creationdate" required="true"/>
+            </column>
+            <column name="user" order="110" display="none">
+                <widget type="select" fieldname="nick" >
+                    <values source="users" fieldcode="nick" filedtile="nick"/>
+                </widget>
+            </column>
+            <column name="last-update" display="none" order="120">
+                <widget type="datetime" fieldname="lastupdate"/>
+            </column>
+            <column name="last-user" order="130" display="none">
+                <widget type="select" fieldname="lastnick" >
+                    <values source="users" fieldcode="nick" filedtile="nick"/>
+                </widget>
+            </column>
+        </group>
+    </columns>
+</view>

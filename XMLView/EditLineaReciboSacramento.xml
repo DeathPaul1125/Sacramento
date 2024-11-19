@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <group name="data" numcolumns="12">
+            <column name="id" display="none" order="130">
+                <widget type="text" fieldname="id" readonly="true"/>
+            </column>
+            <column name="codrecibo" display="none" order="100">
+                <widget type="text" fieldname="codrecibo"/>
+            </column>
+            <column name="tipo" display="left" order="120" numcolumns="2">
+                <widget type="select" fieldname="tipo">
+                    <values title="Amortizacion">1</values>
+                    <values title="Instalacion de Agua">2</values>
+                    <values title="Pago de Escritura">3</values>
+                    <values title="Cancelacion Total del lote">4</values>
+                    <values title="Reposicion del contador">5</values>
+                    <values title="Suspension del servicio de agua">6</values>
+                    <values title="Habilitacion del servicio de agua">7</values>
+                    <values title="Instalacion de Energia Electrica">8</values>
+                    <values title="Remedida de Lote">9</values>
+                    <values title="Sesion de derechos">10</values>
+                    <values title="Cargos">11</values>
+                    <values title="Abonos">12</values>
+                    <values title="Capital">13</values>
+                    <values title="Interes">14</values>
+                </widget>
+            </column>
+            <column name="descripcion" display="left" order="110">
+                <widget type="text" fieldname="descripcion" maxlength="150"/>
+            </column>
+            <column name="documento" display="left" order="120">
+                <widget type="text" fieldname="documento" maxlength="100"/>
+            </column>
+            <column name="valor" display="left" order="160">
+                <widget type="money" fieldname="valor"/>
+            </column>
+        </group>
+        <group name="logs" numcolumns="12">
+            <column name="creation-date" display="none" order="100">
+                <widget type="datetime" fieldname="creation_date" required="true"/>
+            </column>
+            <column name="user" order="110" display="none">
+                <widget type="select" fieldname="nick" >
+                    <values source="users" fieldcode="nick" fieldtile="nick"/>
+                </widget>
+            </column>
+            <column name="last-update" display="none" order="120">
+                <widget type="datetime" fieldname="last_update"/>
+            </column>
+            <column name="last-user" order="130" display="none">
+                <widget type="select" fieldname="last_nick" >
+                    <values source="users" fieldcode="nick" fieldtile="nick"/>
+                </widget>
+            </column>
+        </group>
+    </columns>
+</view>

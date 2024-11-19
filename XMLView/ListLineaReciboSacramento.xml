@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <column name="id" display="none" order="130">
+            <widget type="text" fieldname="id" readonly="true"/>
+        </column>
+        <column name="codrecibo" display="left" order="100">
+            <widget type="number" fieldname="codrecibo" max="0" min="0" step="0"/>
+        </column>
+        <column name="descripcion" display="left" order="110">
+            <widget type="text" fieldname="descripcion" maxlength="150"/>
+        </column>
+        <column name="documento" display="left" order="120">
+            <widget type="text" fieldname="documento" maxlength="100"/>
+        </column>
+        <column name="name" display="" order="140">
+            <widget type="text" fieldname="name" maxlength="100"/>
+        </column>
+        <column name="tipo" display="left" order="150">
+            <widget type="text" fieldname="tipo" maxlength="100"/>
+        </column>
+        <column name="valor" display="left" order="160">
+            <widget type="number" fieldname="valor" max="0" min="0" step="0"/>
+        </column>
+        <column name="creation-date" display="none" order="170">
+            <widget type="datetime" fieldname="creation_date" required="true"/>
+        </column>
+        <column name="user" order="180">
+            <widget type="select" fieldname="nick" >
+                <values source="users" fieldcode="nick" fieldtile="nick"/>
+            </widget>
+        </column>
+        <column name="last-update" display="none" order="190">
+            <widget type="datetime" fieldname="last_update"/>
+        </column>
+        <column name="last-user" order="200">
+            <widget type="select" fieldname="last_nick" >
+                <values source="users" fieldcode="nick" fieldtile="nick"/>
+            </widget>
+        </column>
+    </columns>
+</view>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <group name="data-cliente" numcolumns="12" title="Datos del Cliente">
+            <column name="id" display="none" order="180">
+                <widget type="text" fieldname="id" readonly="true"/>
+            </column>
+            <column name="recibolote" display="left" order="90" numcolumns="2" title="Recibo de Lote">
+                <widget type="text" fieldname="recibolote"/>
+            </column>
+            <column name="cliente" display="left" order="100" numcolumns="4" title="Cliente">
+                <widget type="autocomplete" fieldname="cliente" required="true">
+                    <values source="clientes" fieldcode="codcliente" fieldtitle="nombre"/>
+                </widget>
+            </column>
+            <column name="direccion" display="left" order="105"  numcolumns="4">
+                <widget type="text" fieldname="direccion" maxlength="150"/>
+            </column>
+            <column name="emision" display="left" order="110" numcolumns="2">
+                <widget type="date" fieldname="emision"/>
+            </column>
+        </group>
+        <group name="data-lote" numcolumns="12" title="Datos del Lote" valign="center">
+            <column name="codlote" display="left" order="100" numcolumns="2">
+                <widget type="text" fieldname="codlote"/>
+            </column>
+            <column name="fpago" display="left" order="105" numcolumns="2">
+                <widget type="date" fieldname="fpago"/>
+            </column>
+            <column name="numcuota" display="left" order="110" numcolumns="2">
+                <widget type="number" fieldname="numcuota" decimal="0"/>
+            </column>
+            <column name="diasmora" display="left" order="120" numcolumns="2">
+                <widget type="number" fieldname="diasmora" decimal="0"/>
+            </column>
+            <column name="formapago" display="left" order="125" numcolumns="2">
+                <widget type="select" fieldname="formapago">
+                    <values title="Efectivo">1</values>
+                    <values title="Cheque">2</values>
+                    <values title="Tarjeta">3</values>
+                    <values title="Depósito">4</values>
+                </widget>
+            </column>
+            <column name="cargomora" display="left" order="130" numcolumns="2">
+                <widget type="number" fieldname="cargomora" />
+            </column>
+            <column name="totalpago" display="left" order="135" numcolumns="2">
+                <widget type="number" fieldname="totalpago" />
+            </column>
+            <column name="vaolorcuota" display="left" order="140" numcolumns="2">
+                <widget type="number" fieldname="vaolorcuota" />
+            </column>
+            <column name="pagado" display="left" order="145" numcolumns="2">
+                <widget type="checkbox" fieldname="pagado" />
+            </column>
+        </group>
+        <group name="logs" numcolumns="12">
+            <column name="creation-date" display="none" order="100">
+                <widget type="datetime" fieldname="creation_date" required="true"/>
+            </column>
+            <column name="user" order="110" display="none">
+                <widget type="select" fieldname="nick" >
+                    <values source="users" fieldcode="nick" fieldtile="nick"/>
+                </widget>
+            </column>
+            <column name="last-update" display="none" order="120">
+                <widget type="datetime" fieldname="last_update"/>
+            </column>
+            <column name="last-user" order="130" display="none">
+                <widget type="select" fieldname="last_nick" >
+                    <values source="users" fieldcode="nick" fieldtile="nick"/>
+                </widget>
+            </column>
+        </group>
+    </columns>
+</view>

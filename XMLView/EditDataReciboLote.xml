@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <group name="data" numcolumns="12">
+            <column name="id" display="none" order="140">
+                <widget type="text" fieldname="id" readonly="true"/>
+            </column>
+            <column name="codrecibolote" display="none" order="100">
+                <widget type="text" fieldname="codrecibolote" maxlength="50"/>
+            </column>
+            <column name="fecha" display="left" order="100">
+                <widget type="date" fieldname="fecha"/>
+            </column>
+            <column name="documento" display="left" order="105">
+                <widget type="text" fieldname="documento" maxlength="100"/>
+            </column>
+            <column name="valor" display="left" order="110">
+                <widget type="number" fieldname="valor"/>
+            </column>
+            <column name="descripcion" display="left" order="115">
+                <widget type="text" fieldname="descripcion" maxlength="100"/>
+            </column>
+        </group>
+        <group name="logs" numcolumns="12">
+            <column name="creation-date" display="none" order="100">
+                <widget type="datetime" fieldname="creation_date" required="true"/>
+            </column>
+            <column name="user" order="110" display="none">
+                <widget type="select" fieldname="nick" >
+                    <values source="users" fieldcode="nick" fieldtile="nick"/>
+                </widget>
+            </column>
+            <column name="last-update" display="none" order="120">
+                <widget type="datetime" fieldname="last_update"/>
+            </column>
+            <column name="last-user" order="130" display="none">
+                <widget type="select" fieldname="last_nick" >
+                    <values source="users" fieldcode="nick" fieldtile="nick"/>
+                </widget>
+            </column>
+        </group>
+    </columns>
+</view>

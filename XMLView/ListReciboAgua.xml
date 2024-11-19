@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <column name="id" display="none" order="150">
+            <widget type="text" fieldname="id" readonly="true"/>
+        </column>
+        <column name="codrecibo" display="none" order="120" numcolumns="2">
+            <widget type="text" fieldname="codrecibo" maxlength="50"/>
+        </column>
+        <column name="cliente" display="left" order="90" numcolumns="12" title="Cliente">
+            <widget type="autocomplete" fieldname="cliente" required="true">
+                <values source="clientes" fieldcode="codcliente" fieldtitle="nombre"/>
+            </widget>
+        </column>
+        <column name="codlote" display="left" order="100" numcolumns="2">
+            <widget type="autocomplete" fieldname="codlote" readonly="dinamic">
+                <values source="lotes" fieldcode="id" fieldtitle="codlote"/>
+            </widget>
+        </column>
+        <column name="lectura" display="left" order="115" numcolumns="1">
+            <widget type="number" fieldname="lectura" readonly="true" decimal="0"/>
+        </column>
+        <column name="exceso" display="left" order="116" numcolumns="1">
+            <widget type="number" fieldname="exceso" readonly="true" decimal="0"/>
+        </column>
+        <column name="flectura" display="none" order="130" numcolumns="2">
+            <widget type="date" fieldname="flectura" readonly="true"/>
+        </column>
+        <column name="fpago" display="none" order="140" numcolumns="2">
+            <widget type="date" fieldname="fpago"/>
+        </column>
+        <column name="colonia" display="left" order="90" numcolumns="2" title="Colonia">
+            <widget type="autocomplete" fieldname="colonia" required="true">
+                <values source="colonias" fieldcode="id" fieldtitle="nombre"/>
+            </widget>
+        </column>
+        <column name="mora" display="left" order="150" numcolumns="2" title="Valor Exceso">
+            <widget type="money" fieldname="mora"/>
+        </column>
+        <column name="valor" display="left" order="160" numcolumns="2" title="Pago Mensual">
+            <widget type="money" fieldname="valor"/>
+        </column>
+        <column name="total" display="left" order="170" numcolumns="2">
+            <widget type="money" fieldname="total" />
+        </column>
+        <column name="pagado" display="left" order="180" numcolumns="2">
+            <widget type="checkbox" fieldname="pagado"/>
+        </column>
+        <column name="creation-date" display="none" order="220">
+            <widget type="datetime" fieldname="creation_date" required="true"/>
+        </column>
+        <column name="user" order="230" display="none">
+            <widget type="select" fieldname="nick">
+                <values source="users" fieldcode="nick" fieldtile="nick"/>
+            </widget>
+        </column>
+        <column name="last-update" display="none" order="240">
+            <widget type="datetime" fieldname="last_update"/>
+        </column>
+        <column name="last-user" order="250" display="none">
+            <widget type="select" fieldname="last_nick" >
+                <values source="users" fieldcode="nick" fieldtile="nick"/>
+            </widget>
+        </column>
+    </columns>
+</view>
