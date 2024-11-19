@@ -3,7 +3,7 @@ $(document).on('click', '.widgetTextBtn button', function(){
     let value = $(input).val();
     let jsfile = $(input).attr('jsfile');
     let action = $(input).attr('action');
-
+xxx
     if (action === '' || value === '') {
         return;
     }

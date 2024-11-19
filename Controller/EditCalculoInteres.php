@@ -17,6 +17,9 @@ use FacturaScripts\Plugins\Sacramento\Model\ReciboSacramento;
 
 class EditCalculoInteres extends EditController
 {
+
+    // prueba jose
+    
     public function getModelClassName(): string
     {
         return "CalculoInteres";
