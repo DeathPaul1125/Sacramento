@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <column name="id" display="none" order="180">
+            <widget type="text" fieldname="id" readonly="true"/>
+        </column>
+        <column name="recibolote" display="left" order="104" numcolumns="2">
+            <widget type="text" fieldname="recibolote"/>
+        </column>
+        <column name="cargomora" display="none" order="100">
+            <widget type="number" fieldname="cargomora" max="0" min="0" step="0"/>
+        </column>
+        <column name="cliente" display="left" order="110">
+            <widget type="autocomplete" fieldname="cliente" required="true">
+                <values source="clientes" fieldcode="codcliente" fieldtitle="nombre"/>
+            </widget>
+        </column>
+        <column name="codlote" display="left" order="120">
+            <widget type="text" fieldname="codlote" maxlength="50"/>
+        </column>
+        <column name="diasmora" display="left" order="130">
+            <widget type="number" fieldname="diasmora" decimal="0"/>
+        </column>
+        <column name="direccion" display="left" order="140">
+            <widget type="text" fieldname="direccion" maxlength="150"/>
+        </column>
+        <column name="emision" display="left" order="150">
+            <widget type="date" fieldname="emision"/>
+        </column>
+        <column name="formapago" display="none" order="160">
+            <widget type="number" fieldname="formapago" max="0" min="0" step="0"/>
+        </column>
+        <column name="fpago" display="none" order="170">
+            <widget type="date" fieldname="fpago"/>
+        </column>
+        <column name="numcuota" display="left" order="200">
+            <widget type="number" fieldname="numcuota" decimal="0"/>
+        </column>
+        <column name="tipopago" display="none" order="210">
+            <widget type="number" fieldname="tipopago" max="0" min="0" step="0"/>
+        </column>
+        <column name="totalpago" display="none" order="220">
+            <widget type="number" fieldname="totalpago" max="0" min="0" step="0"/>
+        </column>
+        <column name="vaolorcuota" display="left" order="230">
+            <widget type="money" fieldname="vaolorcuota" max="0" min="0" step="0"/>
+        </column>
+        <column name="creation-date" display="none" order="240">
+            <widget type="datetime" fieldname="creation_date" required="true"/>
+        </column>
+        <column name="user" order="250" display="none">
+            <widget type="select" fieldname="nick" >
+                <values source="users" fieldcode="nick" fieldtile="nick"/>
+            </widget>
+        </column>
+        <column name="last-update" display="none" order="260">
+            <widget type="datetime" fieldname="last_update"/>
+        </column>
+        <column name="last-user" order="270" display="none">
+            <widget type="select" fieldname="last_nick" >
+                <values source="users" fieldcode="nick" fieldtile="nick"/>
+            </widget>
+        </column>
+    </columns>
+</view>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <column name="id" display="none" order="140">
+            <widget type="text" fieldname="id" readonly="true"/>
+        </column>
+        <column name="direccion" display="left" order="110">
+            <widget type="text" fieldname="direccion" maxlength="250" required="true"/>
+        </column>
+        <column name="nombre" display="left" order="100">
+            <widget type="text" fieldname="nombre" maxlength="100" required="true"/>
+        </column>
+    </columns>
+</view>

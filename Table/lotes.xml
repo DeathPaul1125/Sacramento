@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+    <column>
+        <name>colonia</name>
+        <type>integer</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>codlote</name>
+        <type>character varying(50)</type>
+    </column>
+    <column>
+        <name>contador</name>
+        <type>character varying(50)</type>
+    </column>
+    <column>
+        <name>cortado</name>
+        <type>integer</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>costo</name>
+        <type>double precision</type>
+    </column>
+    <column>
+        <name>creation_date</name>
+        <type>timestamp</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>direccion</name>
+        <type>text</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>escriturado</name>
+        <type>integer</type>
+    </column>
+    <column>
+        <name>estado</name>
+        <type>integer</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>finca</name>
+        <type>integer</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>finstalacion</name>
+        <type>date</type>
+    </column>
+    <column>
+        <name>folio</name>
+        <type>integer</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>fondo</name>
+        <type>double precision</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>frente</name>
+        <type>double precision</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>id</name>
+        <type>serial</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>last_nick</name>
+        <type>character varying(50)</type>
+    </column>
+    <column>
+        <name>last_update</name>
+        <type>timestamp</type>
+    </column>
+    <column>
+        <name>libro</name>
+        <type>character varying(20)</type>
+    </column>
+    <column>
+        <name>lote</name>
+        <type>character varying(20)</type>
+    </column>
+    <column>
+        <name>manzana</name>
+        <type>integer</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>medidagen</name>
+        <type>character varying(20)</type>
+    </column>
+    <column>
+        <name>name</name>
+        <type>character varying(100)</type>
+    </column>
+    <column>
+        <name>nick</name>
+        <type>character varying(50)</type>
+    </column>
+    <column>
+        <name>observaciones</name>
+        <type>text</type>
+    </column>
+    <column>
+        <name>pagua</name>
+        <type>integer</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>preciom</name>
+        <type>double precision</type>
+    </column>
+    <column>
+        <name>sector</name>
+        <type>integer</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>sefactura</name>
+        <type>integer</type>
+    </column>
+    <column>
+        <name>suspendido</name>
+        <type>integer</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>tipo</name>
+        <type>integer</type>
+        <null>NO</null>
+    </column>
+    <column>
+        <name>totalmetros</name>
+        <type>double precision</type>
+    </column>
+    <column>
+        <name>varas2</name>
+        <type>double precision</type>
+    </column>
+    <constraint>
+        <name>lotes_pkey</name>
+        <type>PRIMARY KEY (id)</type>
+    </constraint>
+    <constraint>
+        <name>ca_lotes_users_last_nick</name>
+        <type>FOREIGN KEY (last_nick) REFERENCES users (nick) ON DELETE SET NULL ON UPDATE CASCADE</type>
+    </constraint>
+    <constraint>
+        <name>ca_lotes_users_nick</name>
+        <type>FOREIGN KEY (nick) REFERENCES users (nick) ON DELETE SET NULL ON UPDATE CASCADE</type>
+    </constraint>
+</table>

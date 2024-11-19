@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <group name="data" numcolumns="12">
+            <column name="id" display="none" order="130">
+                <widget type="text" fieldname="id" readonly="true"/>
+            </column>
+            <column name="codlote" display="left" order="100">
+                <widget type="autocomplete" fieldname="codlote" readonly="dinamic" onclick="EditLote">
+                    <values source="lotes" fieldcode="id" fieldtitle="codlote"/>
+                </widget>
+            </column>
+            <column name="codrecibo" display="none" order="110">
+                <widget type="text" fieldname="codrecibo" maxlength="50"/>
+            </column>
+            <column name="fecha" display="left" order="110">
+                <widget type="date" fieldname="fecha"/>
+            </column>
+            <column name="lectura" display="left" order="115">
+                <widget type="number" fieldname="lectura" decimal="0"/>
+            </column>
+            <column name="mes" display="left" order="105">
+                <widget type="number" fieldname="mes" decimal="0"/>
+            </column>
+        </group>
+        <group name="logs" numcolumns="12">
+            <column name="creation-date" display="none" order="100">
+                <widget type="datetime" fieldname="creation_date" required="true"/>
+            </column>
+            <column name="user" order="110" display="none">
+                <widget type="select" fieldname="nick" >
+                    <values source="users" fieldcode="nick" fieldtile="nick"/>
+                </widget>
+            </column>
+            <column name="last-update" display="none" order="120">
+                <widget type="datetime" fieldname="last_update"/>
+            </column>
+            <column name="last-user" order="130" display="none">
+                <widget type="select" fieldname="last_nick" >
+                    <values source="users" fieldcode="nick" fieldtile="nick"/>
+                </widget>
+            </column>
+        </group>
+    </columns>
+</view>

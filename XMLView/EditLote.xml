@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <columns>
+        <group name="data" numcolumns="12" title="General" icon="fas fa-layer-group">
+            <column name="id" display="none" order="220">
+                <widget type="text" fieldname="id" readonly="true"/>
+            </column>
+            <column name="colonia" display="left" order="95">
+                <widget type="select" fieldname="colonia" required="true">
+                    <values source="colonias" fieldcode="id" fieldtitle="nombre"/>
+                </widget>
+            </column>
+            <column name="sector" display="left" order="100">
+                <widget type="number" fieldname="sector" required="true"/>
+            </column>
+            <column name="manzana" display="left" order="105">
+                <widget type="number" fieldname="manzana" required="true"/>
+            </column>
+            <column name="lote" display="left" order="110">
+                <widget type="text" fieldname="lote" required="true"/>
+            </column>
+            <column name="codlote" display="left" order="115">
+                <widget type="text" fieldname="codlote" readonly="true"/>
+            </column>
+            <column name="direccion" display="left" order="115" numcolumns="12">
+                <widget type="text" fieldname="direccion" required="true"/>
+            </column>
+        </group>
+        <group name="config" icon="fas fa-tasks" title="Datos del Lote" numcolumns="6">
+            <column name="finca" display="left" order="100" numcolumns="3">
+                <widget type="number" fieldname="finca" required="true"/>
+            </column>
+            <column name="folio" display="left" order="105" numcolumns="3">
+                <widget type="number" fieldname="folio" required="true"/>
+            </column>
+            <column name="libro" display="left" order="110" numcolumns="3">
+                <widget type="text" fieldname="libro" maxlength="20"/>
+            </column>
+            <column name="estado" display="left" order="115" numcolumns="3">
+                <widget type="select" fieldname="estado" required="true">
+                    <values title="Disponible">1</values>
+                    <values title="Vendido">0</values>
+                </widget>
+            </column>
+        </group>
+        <group name="agua" numcolumns="6" title="Agua" icon="fas fa-faucet">
+            <column name="pagua" display="left" order="100" numcolumns="3">
+                <widget type="select" fieldname="pagua">
+                    <values title="Si">1</values>
+                    <values title="No">0</values>
+                </widget>
+            </column>
+            <column name="cortado" display="left" order="105" numcolumns="3">
+                <widget type="select" fieldname="cortado">
+                    <values title="Si">1</values>
+                    <values title="No">0</values>
+                </widget>
+            </column>
+            <column name="finstalacion" display="left" order="180" numcolumns="4">
+                <widget type="date" fieldname="finstalacion"/>
+            </column>
+            <column name="contador" display="left" order="150" numcolumns="3">
+                <widget type="text" fieldname="contador" maxlength="50"/>
+            </column>
+            <column name="suspendido" display="left" order="155" numcolumns="3">
+                <widget type="select" fieldname="suspendido">
+                    <values title="Si">1</values>
+                    <values title="No">0</values>
+                </widget>
+            </column>
+        </group>
+        <group name="dimension" title="Dimensiones" numbercolumns="12" icon="fas fa-ruler-combined">
+            <column name="frente" display="left" order="100" numcolumns="3">
+                <widget type="number" fieldname="frente" required="true"/>
+            </column>
+            <column name="fondo" display="left" order="105" numcolumns="3">
+                <widget type="number" fieldname="fondo" required="true"/>
+            </column>
+            <column name="totalmetros" display="left" order="110" numcolumns="3">
+                <widget type="number" fieldname="totalmetros" readonly="true"/>
+            </column>
+            <column name="varas2" display="left" order="115" numcolumns="3">
+                <widget type="number" fieldname="varas2" readonly="true"/>
+            </column>
+            <column name="medidagen" display="left" order="120" numcolumns="4">
+                <widget type="text" fieldname="medidagen" maxlength="20"/>
+            </column>
+            <column name="tipo" display="left" order="125" numcolumns="4">
+                <widget type="select" fieldname="tipo">
+                    <values title="Lote">1</values>
+                    <values title="Casa">2</values>
+                </widget>
+            </column>
+        </group>
+        <group name="costos" title="Costos" icon="fas fa-hand-holding-usd">
+            <column name="costo" display="left" order="100" numcolumns="4">
+                <widget type="money" fieldname="costo"/>
+            </column>
+            <column name="preciom" display="left" order="105" numcolumns="4">
+                <widget type="money" fieldname="preciom"/>
+            </column>
+            <column name="escriturado" display="left" order="110" numcolumns="4">
+                <widget type="select" fieldname="escriturado">
+                    <values title="Si">1</values>
+                    <values title="No">2</values>
+                </widget>
+            </column>
+            <column name="sefactura" display="left" order="115" numcolumns="4">
+                <widget type="select" fieldname="sefactura">
+                    <values title="Si">1</values>
+                    <values title="No">0</values>
+                </widget>
+            </column>
+            <column name="observaciones" display="left" order="220" numcolumns="8">
+                <widget type="textarea" fieldname="observaciones"/>
+            </column>
+        </group>
+        <group name="logs" numcolumns="12">
+            <column name="creation-date" display="none" order="100">
+                <widget type="datetime" fieldname="creation_date" required="true"/>
+            </column>
+            <column name="user" order="110" display="none">
+                <widget type="select" fieldname="nick" >
+                    <values source="users" fieldcode="nick" fieldtile="nick"/>
+                </widget>
+            </column>
+            <column name="last-update" display="none" order="120">
+                <widget type="datetime" fieldname="last_update"/>
+            </column>
+            <column name="last-user" order="130" display="none">
+                <widget type="select" fieldname="last_nick" >
+                    <values source="users" fieldcode="nick" fieldtile="nick"/>
+                </widget>
+            </column>
+        </group>
+    </columns>
+</view>
