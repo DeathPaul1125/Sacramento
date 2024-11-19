@@ -12,6 +12,7 @@ $(document).on('click', '.widgetTextBtn button', function(){
         jsfile = window.location.href;
     }
 
+
     $.ajax({
         method: 'POST',
         url: jsfile,
