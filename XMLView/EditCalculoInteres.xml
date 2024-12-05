@@ -14,6 +14,11 @@
                 <widget type="autocomplete" fieldname="cliente2">
                     <values source="clientes" fieldcode="codcliente" fieldtitle="nombre"/>
                 </widget>
+            </column>         
+            <column name="cliente3" display="left" order="96" numcolumns="12" title="Cliente 3">
+                <widget type="autocomplete" fieldname="cliente3">
+                    <values source="clientes" fieldcode="codcliente" fieldtitle="nombre"/>
+                </widget>
             </column>
 <!--             <column name="colonia" display="left" order="95" numcolumns="6" title="Colonia">
                 <widget type="select" fieldname="colonia" required="true">
