@@ -12,37 +12,7 @@ class ReciboSacramento extends ModelClass
 {
     use ModelTrait;
 
-    /** @var string */
-    public string $cliente;
-    /** @var string */
-    public string $codlote;
-    /** @var string */
-    public string $codrecibo;
-    /** @var string */
-    public string $creation_date;
-    /** @var string */
-    public string $fecha;
-    /** @var int */
-    public int $id;
-    /** @var string */
-    public string $last_nick;
-    /** @var string */
-    public string $last_update;
-    /** @var int */
-    public int $mes;
-    /** @var string */
-    public string $name;
-    /** @var string */
-    public string $nick;
-    /** @var string */
-    public string $notas;
-    /** @var int */
-    public int $tipo;
-    /** @var float */
-    public float $total;
-    public $colonia;
-    public $tipopago;
-
+   
     public function clear(): void
     {
         parent::clear();
