@@ -81,6 +81,10 @@
     <column>
         <name>cliente2</name>
         <type>character varying(150)</type>
+    </column>   
+     <column>
+        <name>cliente3</name>
+        <type>character varying(150)</type>
     </column>
     <column>
         <name>preciom2</name>
