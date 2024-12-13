@@ -90,7 +90,7 @@ class NumeroALetras
      *
      * @return string
      */
-    public function toWords(float|int $number, int $decimals = 2): string
+    public function toWords($number, int $decimals = 2): string
     {
         $this->checkApocope();
 
@@ -117,7 +117,7 @@ class NumeroALetras
      *
      * @return string
      */
-    public function toMoney(float|int $number, int $decimals = 2, string $currency = '', string $cents = ''): string
+    public function toMoney($number, int $decimals = 2, string $currency = '', string $cents = ''): string
     {
         $this->checkApocope();
 
@@ -148,7 +148,7 @@ class NumeroALetras
      *
      * @return string
      */
-    public function toString(float|int $number, int $decimals = 2, string $whole_str = '', string $decimal_str = ''): string
+    public function toString($number, int $decimals = 2, string $whole_str = '', string $decimal_str = ''): string
     {
         return $this->toMoney($number, $decimals, $whole_str, $decimal_str);
     }
@@ -162,7 +162,7 @@ class NumeroALetras
      *
      * @return string
      */
-    public function toInvoice(float|int $number, int $decimals = 2, string $currency = ''): string
+    public function toInvoice($number, int $decimals = 2, string $currency = ''): string
     {
         $this->checkApocope();
 
