@@ -1,6 +1,5 @@
 <?php
 
-//Comentario para update
 namespace FacturaScripts\Plugins\Sacramento;
 
 use FacturaScripts\Core\Base\CronClass;
