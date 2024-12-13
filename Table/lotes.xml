@@ -45,6 +45,10 @@
         <name>finca</name>
         <type>integer</type>
         <null>NO</null>
+    </column>    
+    <column>
+        <name>fincaletras</name>
+        <type>character varying(100)</type>
     </column>
     <column>
         <name>finstalacion</name>
@@ -54,6 +58,10 @@
         <name>folio</name>
         <type>integer</type>
         <null>NO</null>
+    </column>
+    <column>
+        <name>folioletras</name>
+        <type>character varying(100)</type>
     </column>
     <column>
         <name>fondo</name>
@@ -83,13 +91,25 @@
         <type>character varying(20)</type>
     </column>
     <column>
+        <name>libroletras</name>
+        <type>character varying(100)</type>
+    </column>
+    <column>
         <name>lote</name>
+        <type>character varying(20)</type>
+    </column>    
+    <column>
+        <name>loteletras</name>
         <type>character varying(20)</type>
     </column>
     <column>
         <name>manzana</name>
         <type>integer</type>
         <null>NO</null>
+    </column>
+        <column>
+        <name>manzanaletras</name>
+        <type>character varying(20)</type>
     </column>
     <column>
         <name>medidagen</name>
@@ -122,6 +142,10 @@
         <null>NO</null>
     </column>
     <column>
+        <name>sectorletras</name>
+        <type>character varying(100)</type>
+    </column>
+    <column>
         <name>sefactura</name>
         <type>integer</type>
     </column>
@@ -138,6 +162,10 @@
     <column>
         <name>totalmetros</name>
         <type>double precision</type>
+    </column>
+    <column>
+        <name>totalmetrosletras</name>
+        <type>character varying(100)</type>
     </column>
     <column>
         <name>varas2</name>

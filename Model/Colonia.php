@@ -54,6 +54,7 @@ class Colonia extends ModelClass
     public $edad;
     public $estadocivil;
     public $profesion;
+    public $departamento;
     public $cuiletras;
     public $fnacimiento;
     public $edadletras;

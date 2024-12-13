@@ -63,6 +63,8 @@ class CalculoInteres extends ModelClass
     public $colonia;
     public $cliente2;
     public $costototal;
+    public $cuotasletras;
+    public $costoloteletras;
 
     public function clear(): void
     {

@@ -68,6 +68,9 @@
             </column>
             <column name="profesion" display="left" order="120" title="Profesion" numcolumns="3">
                 <widget type="text" fieldname="profesion" required="true"/>
+            </column>           
+            <column name="departamento" display="left" order="120" title="Departamento" numcolumns="3">
+                <widget type="text" fieldname="departamento" required="true"/>
             </column>
             <column name="cuiletras" display="none" order="125" title="cuiletras" numcolumns="12">
                 <widget type="text" fieldname="cuiletras" readonly="true"/>
