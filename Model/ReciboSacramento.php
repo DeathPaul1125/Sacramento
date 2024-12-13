@@ -8,11 +8,27 @@ use FacturaScripts\Core\Model\Base\ModelTrait;
 use FacturaScripts\Core\Tools;
 use FacturaScripts\Core\Session;
 
+
 class ReciboSacramento extends ModelClass
 {
     use ModelTrait;
 
-   
+    public  $cliente;
+    public  $codlote;
+    public  $codrecibo;
+    public  $creation_date;
+    public  $fecha;
+    public  $id;
+    public  $last_nick;
+    public  $last_update;
+    public  $mes;
+    public  $name;
+    public  $nick;
+    public  $notas;
+    public  $tipo;
+    public  $total;
+    public $colonia;
+    public $tipopago;
 
     public function clear(): void
     {

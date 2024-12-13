@@ -14,14 +14,9 @@ use FacturaScripts\Dinamic\Model\LineaReciboSacramento;
 use FacturaScripts\Dinamic\Model\VentaLote;
 use FacturaScripts\Plugins\Sacramento\Model\ReciboLote;
 use FacturaScripts\Plugins\Sacramento\Model\ReciboSacramento;
-use FacturaScripts\Plugins\Sacramento\Lib\NumeroALetras;
 
 class EditCalculoInteres extends EditController
 {
-
-    // prueba jose
-    //prueba con rama
-    
     public function getModelClassName(): string
     {
         return "CalculoInteres";
@@ -102,9 +97,7 @@ class EditCalculoInteres extends EditController
         return $calculo;
     }
     protected function execPreviousAction($action): ?bool
-    {
-
-
+    {     
         $calculointeres = new CalculoInteres();
         $code = $this->request->get("code");
         
@@ -125,8 +118,8 @@ class EditCalculoInteres extends EditController
 
             //Guardar la edad en letras
             $calculointeres->save();
-        }
-
+        }        
+        
         switch($action)
         {
             case 'CalculaData':
@@ -138,11 +131,8 @@ class EditCalculoInteres extends EditController
             case 'VendeLote':
                 return $this->VendeLote();
         }
-
-        
         return parent::execPreviousAction($action);
     }
-
     protected function CalculaData()
     {
         $calculo = new CalculoInteres();
