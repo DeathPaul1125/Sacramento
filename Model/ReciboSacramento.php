@@ -13,6 +13,7 @@ class ReciboSacramento extends ModelClass
     use ModelTrait;
 
    
+
     public function clear(): void
     {
         parent::clear();

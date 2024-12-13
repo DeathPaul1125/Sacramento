@@ -21,16 +21,21 @@ class Lote extends ModelClass
     public $escriturado;
     public $estado;
     public $finca;
+    public $fincaletras;
     public $finstalacion;
     public $folio;
+    public $folioletras;
     public $fondo;
     public $frente;
     public $id;
     public $last_nick;
     public $last_update;
     public $libro;
+    public $libroletras;
     public $lote;
+    public $loteletras;
     public $manzana;
+    public $manzanaletras;
     public $medidagen;
     public $name;
     public $nick;
@@ -38,10 +43,12 @@ class Lote extends ModelClass
     public $pagua;
     public $preciom;
     public $sector;
+    public $sectorletras;
     public $sefactura;
     public $suspendido;
     public $tipo;
     public $totalmetros;
+    public $totalmetrosletras;
     public $varas2;
     public $codlote;
 

@@ -20,6 +20,10 @@
     <column>
         <name>profesion</name>
         <type>character varying(30)</type>
+    </column>    
+    <column>
+        <name>departamento</name>
+        <type>character varying(30)</type>
     </column>
     <column>
         <name>cuiletras</name>

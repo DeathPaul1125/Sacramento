@@ -7,6 +7,10 @@
     <column>
         <name>costolote</name>
         <type>double precision</type>
+    </column>    
+    <column>
+        <name>costoloteletras</name>
+        <type>character varying(50)</type>
     </column>
     <column>
         <name>creation_date</name>
@@ -20,6 +24,10 @@
     <column>
         <name>cuotas</name>
         <type>integer</type>
+    </column>    
+    <column>
+        <name>cuotasletras</name>
+        <type>character varying(50)</type>
     </column>
     <column>
         <name>colonia</name>
