@@ -14,6 +14,7 @@ use FacturaScripts\Dinamic\Model\LineaReciboSacramento;
 use FacturaScripts\Dinamic\Model\VentaLote;
 use FacturaScripts\Plugins\Sacramento\Model\ReciboLote;
 use FacturaScripts\Plugins\Sacramento\Model\ReciboSacramento;
+use FacturaScripts\Plugins\Sacramento\Lib\NumeroALetras;
 
 class EditCalculoInteres extends EditController
 {
