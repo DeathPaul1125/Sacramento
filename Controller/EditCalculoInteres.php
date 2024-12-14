@@ -121,7 +121,7 @@ class EditCalculoInteres extends EditController
             $calculointeres->cuotaletras = $cuotaletras;
             $calculointeres->saldoconintletras = $saldoconintletras;
 
-            Tools::log()->info(json_encode($calculointeres));
+            //Tools::log()->info(json_encode($calculointeres));
 
             //Guardar la edad en letras
             $calculointeres->save();
@@ -153,7 +153,7 @@ class EditCalculoInteres extends EditController
         //Intereses por anio
         $r = $calculo->tasaint/12;
         //Saldo
-        $saldo = number_format($calculo->saldosinint, 2, ".", "");
+        $saldo = $calculo->saldosinint;
         $saldot = 0;
 
         if($calculo->cuotas == 0){
@@ -220,7 +220,7 @@ class EditCalculoInteres extends EditController
                 //$this->BorraData();
                 //Tools::log()->error('Entrando Opcion 2');
                 //Cuota sobre Saldo
-                $amortizacion = number_format($calculo->saldosinint / $calculo->cuotas, 2, ".", "");
+                $amortizacion = $calculo->saldosinint / $calculo->cuotas;
                     $calculo->cuota = number_format($amortizacion, 2, ".", "");
                     $interestotal = 0;
                     $interest = 0;
