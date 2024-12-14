@@ -154,8 +154,8 @@ class CalculoInteres extends ModelClass
         $this->saldoconint = number_format($this->intereses + $this->saldosinint, 2, '.', '');
 
     }
-    public function primaryDescriptionColumn(): string
+    public function primaryDescription(): string
     {
-        return 'codlote';
+        return "Sector " . $this->getLote()->sector . " Manzana " . $this->getLote()->manzana . " Lote " . $this->getLote()->lote;   
     }
 }

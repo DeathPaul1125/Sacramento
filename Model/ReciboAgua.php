@@ -73,8 +73,17 @@ class ReciboAgua extends ModelClass
     }
     public function primaryDescription(): string
     {
-        return $this->codrecibo;
+        return "Sector " . $this->getLote()->sector . " Manzana " . $this->getLote()->manzana . " Lote " . $this->getLote()->lote;   
     }
+
+     //Cargamos la información del lote
+     public function getLote(): Lote
+     {
+         $lote = new Lote();
+         $lote->loadFromCode($this->codlote);
+         return $lote;
+     }
+     
     public function test(): bool
     {
         if (empty($this->primaryColumnValue())) {
