@@ -27,7 +27,7 @@
             </column> --> 
             <column name="codlote" display="left" order="100" numcolumns="12">
                 <widget type="autocomplete" fieldname="codlote" onclick="EditLote">
-                    <values source="lotes" fieldcode="codlote" fieldtitle="codlote"/>
+                    <values source="lotes" fieldcode="id" fieldtitle="codlote"/>
                 </widget>
             </column>
             <column name="frente" display="left" order="105" numcolumns="6">
