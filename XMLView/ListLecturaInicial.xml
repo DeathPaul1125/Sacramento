@@ -15,7 +15,7 @@
         <column name="lecturat" display="left" order="130">
             <widget type="number" fieldname="lecturat" decimal="0"/>
         </column>
-        <column name="creation-date" display="none" order="150">
+        <column name="creation-date" display="left" order="150">
             <widget type="datetime" fieldname="creation_date" required="true"/>
         </column>
         <column name="user" order="160" display="none">

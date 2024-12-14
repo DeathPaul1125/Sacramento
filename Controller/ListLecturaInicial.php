@@ -22,7 +22,12 @@ class ListLecturaInicial extends ListController
     protected function createViewsLecturaInicial(string $viewName = "ListLecturaInicial"): void
     {
         $this->addView($viewName, "LecturaInicial", "Lectura Inicial", "fas fa-clock");
-        
+        $this->addFilterPeriod($viewName, 'creation_date', 'period', 'creation_date',true);
+        $this->addSearchFields($viewName, ["id", "creation_date", "codlote"]);
+        $this->addFilterAutocomplete($viewName, 'codlote', 'Lotes', 'codlote', 'lotes', 'id', 'codlote');
+
+        $this->addOrderBy($viewName, ["creation_date"], "fecha");
+        $this->addOrderBy($viewName, ["mes"], "mes");
         // Esto es un ejemplo ... Debe de cambiarlo según los nombres de campos del modelo
         // $this->addOrderBy($viewName, ["id"], "id", 2);
         // $this->addOrderBy($viewName, ["name"], "name");
