@@ -108,12 +108,18 @@ class EditCalculoInteres extends EditController
 
             $cuotasletras = $formatter->toString(intval($calculointeres->cuotas));
             $costoloteletras = $formatter->toString(intval($calculointeres->costolote));
+            $engancheletras = $formatter->toString(intval($calculointeres->enganche));
+            $cuotaletras = $formatter->toString(intval($calculointeres->cuota));
+            $saldoconintletras = $formatter->toString(intval($calculointeres->saldoconint));
 
 
          
             //Guardar el cui en letras
             $calculointeres->cuotasletras = $cuotasletras;
             $calculointeres->costoloteletras = $costoloteletras;
+            $calculointeres->engancheletras = $engancheletras;
+            $calculointeres->cuotaletras = $cuotaletras;
+            $calculointeres->saldoconintletras = $saldoconintletras;
 
             Tools::log()->info(json_encode($calculointeres));
 

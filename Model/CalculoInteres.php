@@ -65,6 +65,9 @@ class CalculoInteres extends ModelClass
     public $costototal;
     public $cuotasletras;
     public $costoloteletras;
+    public $engancheletras;
+    public $cuotaletras;
+    public $saldoconintletras;
 
     public function clear(): void
     {
