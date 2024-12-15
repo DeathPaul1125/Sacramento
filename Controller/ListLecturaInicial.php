@@ -28,6 +28,10 @@ class ListLecturaInicial extends ListController
 
         $this->addOrderBy($viewName, ["creation_date"], "fecha");
         $this->addOrderBy($viewName, ["mes"], "mes");
+ 
+        $colonias = $this->codeModel->all('colonias', 'id', 'nombre');
+        $this->addFilterSelect($viewName, 'colonia', 'Colonias', 'codlote', $colonias);
+
         // Esto es un ejemplo ... Debe de cambiarlo según los nombres de campos del modelo
         // $this->addOrderBy($viewName, ["id"], "id", 2);
         // $this->addOrderBy($viewName, ["name"], "name");

@@ -2,6 +2,7 @@
 namespace FacturaScripts\Plugins\Sacramento\Controller;
 
 use FacturaScripts\Core\Lib\ExtendedController\ListController;
+use FacturaScripts\Dinamic\Model\Colonia;
 
 class ListLecturaAgua extends ListController
 {
@@ -32,5 +33,11 @@ class ListLecturaAgua extends ListController
 
         // Esto es un ejemplo ... Debe de cambiarlo según los nombres de campos del modelo
         $this->addSearchFields($viewName, ["mes", "codlote"]);
+             
+        $colonias = $this->codeModel->all('colonias', 'id', 'nombre');
+        $this->addFilterSelect($viewName, 'colonia', 'Colonias', 'codlote', $colonias);
+
+        //Parameters a buscar
+        $this->addSearchFields($viewName, ["sector", "colonia", "manzana", "lote"]);
     }
 }

@@ -8,7 +8,7 @@
             <widget type="text" fieldname="codrecibo" maxlength="50"/>
         </column>
         <column name="cliente" display="left" order="90" numcolumns="12" title="Cliente">
-            <widget type="autocomplete" fieldname="cliente" required="true">
+            <widget type="autocomplete" fieldname="cliente" required="true" onclick="EditCliente">
                 <values source="clientes" fieldcode="codcliente" fieldtitle="nombre"/>
             </widget>
         </column>
