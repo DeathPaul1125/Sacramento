@@ -22,10 +22,11 @@ class ListCalculoInteres extends ListController
     protected function createViewsCalculoInteres(string $viewName = "ListCalculoInteres"): void
     {
         $this->addView($viewName, "CalculoInteres", "Reporte de amortizaciones", "fas fa-hand-holding-usd");
-        
-        $colonias = $this->codeModel->all('colonias', 'id', 'nombre');
-        $this->addFilterSelect($viewName, 'colonia', 'Colonias', 'codlote', $colonias);
+  
 
+        $colonias = $this->codeModel->all('colonias', 'id', 'nombre');
+        $this->addFilterSelect($viewName, 'colonia', 'Colonias', 'colonia', $colonias);
+        
         //Parameters a buscar
         $this->addSearchFields($viewName, [ 'codlote', 'id', 'cliente']);
    

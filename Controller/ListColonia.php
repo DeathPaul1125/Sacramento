@@ -24,7 +24,8 @@ class ListColonia extends ListController
         $this->addView($viewName, "Colonia", "Colonias", "fas fa-home");
 
         $colonias = $this->codeModel->all('colonias', 'id', 'nombre');
-        $this->addFilterSelect($viewName, 'colonia', 'Colonias', 'colonia', $colonias);
+        $this->addFilterSelect($viewName, 'id', 'Colonias', 'id', $colonias);
+        
 
         //Parameters a buscar
         $this->addSearchFields($viewName, ["sector", "colonia", "manzana", "lote"]);

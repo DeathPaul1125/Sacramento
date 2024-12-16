@@ -172,6 +172,7 @@ class EditCalculoInteres extends EditController
 
                 $cuota = ($base1/$base4);
                 $calculo->cuota = number_format($cuota, 2, ".", "");
+                $calculo->colonia = $this->lote()->colonia;
                 $calculo->save();
                 $totalinteres = 0;
                 //var_dump($totalinteres);
@@ -224,6 +225,7 @@ class EditCalculoInteres extends EditController
                     $calculo->cuota = number_format($amortizacion, 2, ".", "");
                     $interestotal = 0;
                     $interest = 0;
+                    $calculo->colonia = $this->lote()->colonia;
                     for ($contador = 1; $contador <= $calculo->cuotas; $contador++) {
                         $cont = $contador - 1;
                         $nextdate = date("d-m-Y", strtotime($calculo->fechacuota . " +".$cont ." month"));
