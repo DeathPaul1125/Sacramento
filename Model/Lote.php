@@ -69,6 +69,10 @@ class Lote extends ModelClass
         $this->sector = 0;
         $this->totalmetros = 0.0;
         $this->varas2 = 0.0;
+        $this->pagua = 0;
+        $this->suspendido = 0;
+        $this->tipo = 0;
+
     }
 
     public static function primaryColumn(): string
