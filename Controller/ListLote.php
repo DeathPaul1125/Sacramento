@@ -35,6 +35,6 @@ class ListLote extends ListController
         $this->addFilterSelect($viewName, 'id', 'Colonias', 'colonia', $colonias);
 
         //Parameters a buscar
-        $this->addSearchFields($viewName, [ 'nombre', 'lote' ]);
+        $this->addSearchFields($viewName, [  'codlote' ]);
     }
 }

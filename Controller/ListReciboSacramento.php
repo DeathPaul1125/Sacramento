@@ -39,6 +39,8 @@ class ListReciboSacramento extends ListController
             ['code' => '12', 'description' => 'Abonos'],
         ];
         $this->addFilterSelect($viewName, 'tipo', 'tipo', 'tipo', $countries);
+        $this->addFilterAutocomplete($viewName, 'cliente', 'Cliente', 'cliente' , 'clientes', 'codcliente', 'nombre');
+        $this->addFilterAutocomplete($viewName, 'codlote', 'Lote', 'codlote', 'lotes');
 
         // Esto es un ejemplo ... Debe de cambiarlo según los nombres de campos del modelo
         $this->addOrderBy($viewName, ["fecha"], "Fecha", 2);
@@ -46,5 +48,8 @@ class ListReciboSacramento extends ListController
         
         // Esto es un ejemplo ... Debe de cambiarlo según los nombres de campos del modelo
         $this->addSearchFields($viewName, ["codlote", "tipo"]);
+        $this->addFilterPeriod($viewName, 'creation_date', 'period', 'creation_date',true);
+
+
     }
 }

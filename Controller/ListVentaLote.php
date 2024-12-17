@@ -28,8 +28,10 @@ class ListVentaLote extends ListController
         $this->addFilterSelect($viewName, 'id', 'Colonias', 'colonia', $colonias);
 
         $this->addFilterAutocomplete($viewName, 'codlote', 'Lotes', 'codlote', 'lotes', 'id', 'codlote');
+        $this->addFilterAutocomplete($viewName, 'cliente', 'Cliente', 'cliente' , 'clientes', 'codcliente', 'nombre');
+
         // Esto es un ejemplo ... Debe de cambiarlo según los nombres de campos del modelo
-        $this->addSearchFields($viewName, ["mes", "codlote"]);
+        $this->addSearchFields($viewName, ['codlote', 'cliente']);
              
 
         // Esto es un ejemplo ... Debe de cambiarlo según los nombres de campos del modelo

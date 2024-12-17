@@ -30,8 +30,10 @@ class ListReciboAgua extends ListController
         // $this->addOrderBy($viewName, ["name"], "name");
         
         // Esto es un ejemplo ... Debe de cambiarlo según los nombres de campos del modelo
-        $this->addSearchFields($viewName, ["id", "name", "codlote"]);
+        $this->addSearchFields($viewName, ['id', 'cliente', 'codlote']);
         $this->addFilterAutocomplete($viewName, 'codlote', 'codlote', 'codlote', 'codlote');
+        $this->addFilterAutocomplete($viewName, 'cliente', 'Cliente', 'cliente' , 'clientes', 'codcliente', 'nombre');
+
         $this->addFilterPeriod($viewName, 'creation_date', 'period', 'creation_date',true);
         $this->addOrderBy($viewName, ["creation_date"], "fecha");
         //filtro por colonia

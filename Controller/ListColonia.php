@@ -28,7 +28,7 @@ class ListColonia extends ListController
         
 
         //Parameters a buscar
-        $this->addSearchFields($viewName, ["sector", "colonia", "manzana", "lote"]);
+        $this->addSearchFields($viewName, ['nombre']);
         
         // Esto es un ejemplo ... Debe de cambiarlo según los nombres de campos del modelo
         // $this->addOrderBy($viewName, ["id"], "id", 2);
