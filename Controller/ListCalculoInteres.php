@@ -29,7 +29,9 @@ class ListCalculoInteres extends ListController
         
         //Parameters a buscar
         $this->addSearchFields($viewName, [ 'codlote', 'id', 'cliente']);
-   
+        $this->addFilterAutocomplete($viewName, 'codlote', 'Lotes', 'codlote', 'lotes', 'id', 'codlote');
+        $this->addFilterPeriod($viewName, 'creation_date', 'period', 'creation_date',true);
+
         // Esto es un ejemplo ... Debe de cambiarlo según los nombres de campos del modelo
         // $this->addOrderBy($viewName, ["id"], "id", 2);
         // $this->addOrderBy($viewName, ["name"], "name");

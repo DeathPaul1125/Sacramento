@@ -27,6 +27,16 @@ class ListVentaLote extends ListController
         //id es la key del array, colonia es el nombre que se encuentra en el modelo
         $this->addFilterSelect($viewName, 'id', 'Colonias', 'colonia', $colonias);
 
+        $this->addFilterAutocomplete($viewName, 'codlote', 'Lotes', 'codlote', 'lotes', 'id', 'codlote');
+        // Esto es un ejemplo ... Debe de cambiarlo según los nombres de campos del modelo
+        $this->addSearchFields($viewName, ["mes", "codlote"]);
+             
+
+        // Esto es un ejemplo ... Debe de cambiarlo según los nombres de campos del modelo
+        // $this->addOrderBy($viewName, ["id"], "id", 2);
+        $this->addOrderBy($viewName, ["fecha"], "fecha");
+        $this->addOrderBy($viewName, ["mes"], "mes");
+        $this->addFilterPeriod($viewName, 'fecha', 'period', 'fecha');
     
     }
 }

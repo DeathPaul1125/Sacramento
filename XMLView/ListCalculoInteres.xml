@@ -26,5 +26,8 @@
         <column name="costolote" display="left" order="120">
             <widget type="money" fieldname="costolote"/>
         </column>
+        <column name="creation_date" display="none" order="130">
+            <widget type="date" fieldname="creation_date" readonly="true"/>
+        </column>
     </columns>
 </view>
