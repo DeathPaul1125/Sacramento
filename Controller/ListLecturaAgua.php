@@ -18,6 +18,7 @@ class ListLecturaAgua extends ListController
     protected function createViews(): void
     {
         $this->createViewsLecturaAgua();
+
     }
 
     protected function createViewsLecturaAgua(string $viewName = "ListLecturaAgua"): void
@@ -25,19 +26,17 @@ class ListLecturaAgua extends ListController
         $this->addView($viewName, "LecturaAgua", "Lectura de Contador", "fas fa-hand-holding-water");
         $this->addFilterAutocomplete($viewName, 'codlote', 'Lotes', 'codlote', 'lotes', 'id', 'codlote');
 
-        // Esto es un ejemplo ... Debe de cambiarlo según los nombres de campos del modelo
-        // $this->addOrderBy($viewName, ["id"], "id", 2);
         $this->addOrderBy($viewName, ["fecha"], "fecha");
         $this->addOrderBy($viewName, ["mes"], "mes");
         $this->addFilterPeriod($viewName, 'fecha', 'period', 'fecha');
-
-        // Esto es un ejemplo ... Debe de cambiarlo según los nombres de campos del modelo
-        $this->addSearchFields($viewName, ["mes", "codlote"]);
              
         $colonias = $this->codeModel->all('colonias', 'id', 'nombre');
         $this->addFilterSelect($viewName, 'colonia', 'Colonias', 'codlote', $colonias);
 
         //Parameters a buscar
-        $this->addSearchFields($viewName, ["sector", "colonia", "manzana", "lote"]);
+        $this->addSearchFields($viewName, ['codlote' , 'codrecibo','id']);
+
+        
     }
+    
 }
