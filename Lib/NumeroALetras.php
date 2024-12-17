@@ -233,8 +233,14 @@ class NumeroALetras
     private function convertNumber(string $number): string
     {
         $converted = '';
-
-        if (($number < 0) || ($number > 999999999)) {
+    
+        $isNegative = false;
+        if ($number < 0) {
+            $isNegative = true;
+            $number = abs($number);
+        }
+    
+        if ($number > 999999999) {
             throw new ParseError('Wrong parameter number');
         }
 
@@ -242,7 +248,6 @@ class NumeroALetras
         $millones = substr($numberStrFill, 0, 3);
         $miles = substr($numberStrFill, 3, 3);
         $cientos = substr($numberStrFill, 6);
-
         if (intval($millones) > 0) {
             if ($millones == '001') {
                 $converted .= 'UN MILLON ';
@@ -250,7 +255,7 @@ class NumeroALetras
                 $converted .= sprintf('%sMILLONES ', $this->convertGroup($millones));
             }
         }
-
+    
         if (intval($miles) > 0) {
             if ($miles == '001') {
                 $converted .= 'MIL ';
@@ -258,7 +263,7 @@ class NumeroALetras
                 $converted .= sprintf('%sMIL ', $this->convertGroup($miles));
             }
         }
-
+    
         if (intval($cientos) > 0) {
             if ($cientos == '001') {
                 $this->apocope === true ? $converted .= 'UN ' : $converted .= 'UNO ';
@@ -266,7 +271,11 @@ class NumeroALetras
                 $converted .= sprintf('%s ', $this->convertGroup($cientos));
             }
         }
-
+    
+        if ($isNegative) {
+            $converted = 'MENOS ' . $converted;
+        }
+    
         return trim($converted);
     }
 
