@@ -25,10 +25,10 @@
         <column name="capital" display="left" order="130">
             <widget type="money" fieldname="capital"/>
         </column>
-        <column name="saldo" display="left" order="135">
+    <!--     <column name="saldo" display="left" order="135">
             <widget type="money" fieldname="saldo"/>
         </column>
-<!--         <column name="recibo" order="140">
+        <column name="recibo" order="140">
             <widget type="text" fieldname="recibot" onclick="EditReciboLote?recibolote="/>
         </column>
         <column name="pagado" order="145">
