@@ -58,6 +58,8 @@ class Colonia extends ModelClass
     public $cuiletras;
     public $fnacimiento;
     public $edadletras;
+    public $municipiocolonia;
+    public $departamentocolonia;
 
     public function clear() 
     {

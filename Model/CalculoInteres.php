@@ -65,6 +65,9 @@ class CalculoInteres extends ModelClass
     public $costototal;
     public $cuotasletras;
     public $costoloteletras;
+    public $engancheletras;
+    public $cuotaletras;
+    public $saldoconintletras;
 
     public function clear(): void
     {
@@ -144,15 +147,15 @@ class CalculoInteres extends ModelClass
         $tiempo = $this->cuotas/12;
         //saldo sin interes
         //resta del costo total del lote - enganche
-        $this->saldosinint = $this->costolote - ($this->descuento + $this->enganche);
+        $this->saldosinint = number_format($this->costolote - ($this->descuento + $this->enganche), 2, '.', '');
 
-        $this->costototal = $this->saldoconint + $this->enganche;
+        $this->costototal = number_format($this->saldoconint + $this->enganche, 2, '.', '');
 
-        $this->saldoconint = $this->intereses + $this->saldosinint;
+        $this->saldoconint = number_format($this->intereses + $this->saldosinint, 2, '.', '');
 
     }
-    public function primaryDescriptionColumn(): string
+    public function primaryDescription(): string
     {
-        return 'codlote';
+        return "Sector " . $this->getLote()->sector . " Manzana " . $this->getLote()->manzana . " Lote " . $this->getLote()->lote;   
     }
 }

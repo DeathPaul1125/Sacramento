@@ -16,7 +16,6 @@
     <column>
         <name>cortado</name>
         <type>integer</type>
-        <null>NO</null>
     </column>
     <column>
         <name>costo</name>
@@ -39,7 +38,6 @@
     <column>
         <name>estado</name>
         <type>integer</type>
-        <null>NO</null>
     </column>
     <column>
         <name>finca</name>
@@ -130,7 +128,6 @@
     <column>
         <name>pagua</name>
         <type>integer</type>
-        <null>NO</null>
     </column>
     <column>
         <name>preciom</name>
@@ -152,12 +149,10 @@
     <column>
         <name>suspendido</name>
         <type>integer</type>
-        <null>NO</null>
     </column>
     <column>
         <name>tipo</name>
         <type>integer</type>
-        <null>NO</null>
     </column>
     <column>
         <name>totalmetros</name>

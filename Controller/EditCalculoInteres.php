@@ -14,6 +14,7 @@ use FacturaScripts\Dinamic\Model\LineaReciboSacramento;
 use FacturaScripts\Dinamic\Model\VentaLote;
 use FacturaScripts\Plugins\Sacramento\Model\ReciboLote;
 use FacturaScripts\Plugins\Sacramento\Model\ReciboSacramento;
+use FacturaScripts\Plugins\Sacramento\Lib\NumeroALetras;
 
 class EditCalculoInteres extends EditController
 {
@@ -107,14 +108,20 @@ class EditCalculoInteres extends EditController
 
             $cuotasletras = $formatter->toString(intval($calculointeres->cuotas));
             $costoloteletras = $formatter->toString(intval($calculointeres->costolote));
+            $engancheletras = $formatter->toString(intval($calculointeres->enganche));
+            $cuotaletras = $formatter->toString(intval($calculointeres->cuota));
+            $saldoconintletras = $formatter->toString(intval($calculointeres->saldoconint));
 
 
          
             //Guardar el cui en letras
             $calculointeres->cuotasletras = $cuotasletras;
             $calculointeres->costoloteletras = $costoloteletras;
+            $calculointeres->engancheletras = $engancheletras;
+            $calculointeres->cuotaletras = $cuotaletras;
+            $calculointeres->saldoconintletras = $saldoconintletras;
 
-            Tools::log()->info(json_encode($calculointeres));
+            //Tools::log()->info(json_encode($calculointeres));
 
             //Guardar la edad en letras
             $calculointeres->save();
@@ -165,6 +172,7 @@ class EditCalculoInteres extends EditController
 
                 $cuota = ($base1/$base4);
                 $calculo->cuota = number_format($cuota, 2, ".", "");
+                $calculo->colonia = $this->lote()->colonia;
                 $calculo->save();
                 $totalinteres = 0;
                 //var_dump($totalinteres);
@@ -217,6 +225,7 @@ class EditCalculoInteres extends EditController
                     $calculo->cuota = number_format($amortizacion, 2, ".", "");
                     $interestotal = 0;
                     $interest = 0;
+                    $calculo->colonia = $this->lote()->colonia;
                     for ($contador = 1; $contador <= $calculo->cuotas; $contador++) {
                         $cont = $contador - 1;
                         $nextdate = date("d-m-Y", strtotime($calculo->fechacuota . " +".$cont ." month"));
