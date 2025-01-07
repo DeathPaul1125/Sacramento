@@ -40,7 +40,7 @@ class ReciboSacramento extends ModelClass
     }
     public static function primaryColumn(): string
     {
-        return "id";
+        return "codrecibo";
     }
 
     public static function tableName(): string

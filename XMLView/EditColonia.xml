@@ -63,7 +63,7 @@
             <column name="cuirepresentante" display="left" order="105" title="CUI del representante" numcolumns="4">
                 <widget type="number" fieldname="cuirepresentante" required="true"/>
             </column>
-            <column name="fnacimiento" display="left" order="110" title="fnacimiento" numcolumns="2">
+            <column name="fnacimiento" display="left" order="110" title="Fecha Nacimiento" numcolumns="2">
                 <widget type="date" fieldname="fnacimiento" required="true"/>
             </column>
             <column name="edad" display="left" order="110" title="Edad" numcolumns="1">

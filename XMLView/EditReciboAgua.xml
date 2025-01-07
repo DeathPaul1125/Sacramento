@@ -27,7 +27,7 @@
                 <widget type="number" fieldname="lectura" readonly="true" decimal="0"/>
             </column>
      
-            <column name="exceso" display="left" order="116" numcolumns="3">
+            <column name="exceso" display="left" order="116" title="Exceso" numcolumns="3">
                 <widget type="number" fieldname="exceso" readonly="true" decimal="0"/>
             </column>
             <column name="flectura" display="none" order="130" numcolumns="2">

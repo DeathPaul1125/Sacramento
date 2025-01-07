@@ -8,7 +8,7 @@
             <column name="codlote" display="left" order="100">
                 <widget type="text" fieldname="codlote" maxlength="50"/>
             </column>
-            <column name="cliente" display="left" order="105">
+            <column name="cliente" display="left" title="Cliente" order="105">
                 <widget type="autocomplete" fieldname="cliente" required="true">
                     <values source="clientes" fieldcode="codcliente" fieldtitle="nombre"/>
                 </widget>

@@ -6,6 +6,7 @@ use FacturaScripts\Core\Model\Base\ModelClass;
 use FacturaScripts\Core\Model\Base\ModelTrait;
 use FacturaScripts\Core\Tools;
 use FacturaScripts\Core\Session;
+use FacturaScripts\Core\Base\DataBase\DataBaseWhere;
 
 class LecturaInicial extends ModelClass
 {
@@ -46,7 +47,7 @@ class LecturaInicial extends ModelClass
     }
     public function primaryDescription(): string
     {
-        return "Sector " . $this->getLote()->sector . " Manzana " . $this->getLote()->manzana . " Lote " . $this->getLote()->lote;   
+        return "Sector " . $this->getLote()->sector . " Manzana " . $this->getLote()->manzana . " Lote " . $this->getLote()->lote . " Colonia " . $this->getColonia()->nombre;   
     }
 
      //Cargamos la información del lote
@@ -55,6 +56,12 @@ class LecturaInicial extends ModelClass
          $lote = new Lote();
          $lote->loadFromCode($this->codlote);
          return $lote;
+     }
+     public function getColonia(): Colonia
+     {
+         $colonia = new Colonia();
+         $colonia->loadFromCode('',[new DataBaseWhere('id', $this->getLote()->colonia)]);
+         return $colonia;
      }
 
     public function test(): bool

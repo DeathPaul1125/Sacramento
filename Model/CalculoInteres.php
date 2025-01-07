@@ -109,8 +109,12 @@ class CalculoInteres extends ModelClass
     public function getColonia(): Colonia
     {
         $colonia = new Colonia();
-        $colonia->loadFromCode('',[new DataBaseWhere('codcolonia', $this->getLote()->colonia)]);
+        $colonia->loadFromCode('',[new DataBaseWhere('id', $this->getLote()->colonia)]);
         return $colonia;
+    }
+    public function primaryDescription(): string
+    {
+        return "Sector " . $this->getLote()->sector . " Manzana " . $this->getLote()->manzana . " Lote " . $this->getLote()->lote . " Colonia " . $this->getColonia()->nombre;   
     }
     public function test(): bool
     {
@@ -153,9 +157,5 @@ class CalculoInteres extends ModelClass
 
         $this->saldoconint = number_format($this->intereses + $this->saldosinint, 2, '.', '');
 
-    }
-    public function primaryDescription(): string
-    {
-        return "Sector " . $this->getLote()->sector . " Manzana " . $this->getLote()->manzana . " Lote " . $this->getLote()->lote;   
     }
 }
