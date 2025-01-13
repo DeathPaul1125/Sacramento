@@ -40,7 +40,7 @@ class ReciboSacramento extends ModelClass
     }
     public static function primaryColumn(): string
     {
-        return "codrecibo";
+        return "id";
     }
 
     public static function tableName(): string
@@ -80,4 +80,19 @@ class ReciboSacramento extends ModelClass
         }
         $this->total = $total;
     }
+
+    protected function saveInsert(array $values = []): bool
+    {
+        if (empty($this->id)) {
+            $this->id = (string)$this->newCode();
+        }
+
+        $return = parent::saveInsert($values);
+        $id = $this->id;
+       // $idplan->save();
+       
+       
+        return $return;
+    }
+   
 }

@@ -287,10 +287,11 @@ class EditCalculoInteres extends EditController
         $datacalculo = new DataCalculoInteres();
         $where = [new DataBaseWhere('codlote', $code)];
         $datan = $datacalculo->all($where, [], 0, 0);
-
+    
         $lote = new Lote();
         $lote->loadFromCode('', [new DataBaseWhere('codlote', $datalote->codlote)]);
-
+        $lote->estado = 0;
+    
         $contador = 0;
         foreach($datan as $dat)
         {
@@ -299,6 +300,9 @@ class EditCalculoInteres extends EditController
             $anio = date('y', $fecha);
             $contador = $contador + 1;
             $recibo = new ReciboSacramento();
+            if (empty($recibo->id)) {
+                $recibo->id = (string)$recibo->newCode();
+            }
             $codlote = $lote->codlote;
             $recibo->codlote = $codlote;
             //agregar el codigo de lote
@@ -331,6 +335,11 @@ class EditCalculoInteres extends EditController
         $venta->colonia = $this->lote()->colonia;
         $venta->codlote = $this->lote()->codlote;
         $venta->save();
+
+        $lote= $this->lote();
+        $lote->estado = 0;
+        $lote->save();
+
         //Creando Recibos
         $this->CreaRecibos();
         //Crear el contrato segun el lote y el cliente
