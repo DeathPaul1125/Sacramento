@@ -58,25 +58,11 @@ class VentaLote extends ModelClass
     {
         return "lotesvendidos";
     }
-     //Cargamos la información del lote
-     public function getLote(): Lote
-     {
-         $lote = new Lote();
-         $lote->loadFromCode($this->id);
-         return $lote;
-     }
-     
- //Cargamos la información de la Colonia
- public function getColonia(): Colonia
- {
-     $colonia = new Colonia();
-     $colonia->loadFromCode('',[new DataBaseWhere('id', $this->getLote()->colonia)]);
-     return $colonia;
- }
- public function primaryDescription(): string
- {
-     return "Sector " . $this->getLote()->sector . " Manzana " . $this->getLote()->manzana . " Lote " . $this->getLote()->lote . " Colonia " . $this->getColonia()->nombre;   
- }
+
+    public function primaryDescriptionColumn(): string
+    {
+        return 'codlote';
+    }
     public function test(): bool
     {
         if (empty($this->primaryColumnValue())) {
