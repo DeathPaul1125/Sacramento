@@ -62,7 +62,7 @@ class VentaLote extends ModelClass
      public function getLote(): Lote
      {
          $lote = new Lote();
-         $lote->loadFromCode($this->codlote);
+         $lote->loadFromCode($this->id);
          return $lote;
      }
      
@@ -91,7 +91,7 @@ class VentaLote extends ModelClass
             $this->nick = $this->nick ?? Session::user()->nick;
         }
 
-        $this->codlote = Tools::noHtml($this->codlote);
+        $this->codlote = $this->codlote;
         $this->name = Tools::noHtml($this->name);
         return parent::test();
     }

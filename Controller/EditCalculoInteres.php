@@ -291,7 +291,7 @@ class EditCalculoInteres extends EditController
         $lote = new Lote();
         $lote->loadFromCode('', [new DataBaseWhere('codlote', $datalote->codlote)]);
         //acá corregí el estado del lote
-        $lote->estado = 0;
+        //$lote->estado = 0;
     
         $contador = 0;
         foreach($datan as $dat)
@@ -304,13 +304,13 @@ class EditCalculoInteres extends EditController
             if (empty($recibo->id)) {
                 $recibo->id = (string)$recibo->newCode();
             }
-            $codlote = $lote->codlote;
-            $recibo->codlote = $codlote;
+            $codlote = $datacalculo->codlote;
+            $recibo->codlote = $datalote->codlote;
             //agregar el codigo de lote
             $recibo->cliente = $dat->cliente;
             $recibo->fecha = $dat->fecha;
             $recibo->colonia = $lote->colonia;
-            $recibo->codrecibo = $codlote .'-'. $mes .'-'. $anio;
+            $recibo->codrecibo = $datalote->codlote .'-'. $mes .'-'. $anio;
             $recibo->save();
             //Agregando data al recibo
             if ($dat->capital == $dat->capital) {
