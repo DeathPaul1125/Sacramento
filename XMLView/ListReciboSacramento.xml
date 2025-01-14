@@ -9,8 +9,10 @@
                 <values source="clientes" fieldcode="codcliente" fieldtitle="nombre"/>
             </widget>
         </column>
-        <column name="codlote" display="left" order="110">
-            <widget type="text" fieldname="codlote" maxlength="50"/>
+        <column name="codlote" display="left" order="100" numcolumns="12">
+            <widget type="autocomplete" fieldname="codlote" onclick="EditLote">
+                <values source="lotes" fieldcode="id" fieldtitle="codlote"/>
+            </widget>
         </column>
         <column name="codrecibo" display="left" order="120">
             <widget type="text" fieldname="codrecibo" maxlength="15"/>
