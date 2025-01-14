@@ -40,6 +40,7 @@ class ReciboSacramento extends ModelClass
     }
     public static function primaryColumn(): string
     {
+        //aca tenía codlote y lo cambie por id
         return "id";
     }
 

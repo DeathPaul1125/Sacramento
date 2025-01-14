@@ -290,6 +290,7 @@ class EditCalculoInteres extends EditController
     
         $lote = new Lote();
         $lote->loadFromCode('', [new DataBaseWhere('codlote', $datalote->codlote)]);
+        //acá corregí el estado del lote
         $lote->estado = 0;
     
         $contador = 0;
