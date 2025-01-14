@@ -13,6 +13,12 @@
             </column>
             <column name="direccion" display="left" order="100" title="Direccion" numcolumns="6">
                 <widget type="text" fieldname="direccion" maxlength="250" required="true"/>
+            </column>            
+            <column name="municipiocolonia" display="left" order="100" title="Municipio" numcolumns="6">
+                <widget type="text" fieldname="municipiocolonia" maxlength="250" required="true"/>
+            </column>
+            <column name="departamentocolonia" display="left" order="100" title="Departamento" numcolumns="6">
+                <widget type="text" fieldname="departamentocolonia" maxlength="250" required="true"/>
             </column>
         </group>
         <group name="config" numcolumns="12" title="Configuracion" icon="fas fa-cogs">
@@ -57,7 +63,7 @@
             <column name="cuirepresentante" display="left" order="105" title="CUI del representante" numcolumns="4">
                 <widget type="number" fieldname="cuirepresentante" required="true"/>
             </column>
-            <column name="fnacimiento" display="left" order="110" title="fnacimiento" numcolumns="2">
+            <column name="fnacimiento" display="left" order="110" title="Fecha Nacimiento" numcolumns="2">
                 <widget type="date" fieldname="fnacimiento" required="true"/>
             </column>
             <column name="edad" display="left" order="110" title="Edad" numcolumns="1">

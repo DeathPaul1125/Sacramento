@@ -5,7 +5,7 @@
             <column name="id" display="none" order="130">
                 <widget type="text" fieldname="id" readonly="true"/>
             </column>
-            <column name="cliente" order="90" numcolumns="3">
+            <column name="cliente" order="90" title="Cliente" numcolumns="3">
                 <widget type="autocomplete" fieldname="cliente" required="true">
                     <values source="clientes" fieldcode="codcliente" fieldtitle="nombre"/>
                 </widget>

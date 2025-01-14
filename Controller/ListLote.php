@@ -30,9 +30,11 @@ class ListLote extends ListController
 
         
         $colonias = $this->codeModel->all('colonias', 'id', 'nombre');
-        $this->addFilterSelect($viewName, 'colonia', 'Colonias', 'colonia', $colonias);
+
+        //id es la key del array, colonia es el nombre que se encuentra en el modelo
+        $this->addFilterSelect($viewName, 'id', 'Colonias', 'colonia', $colonias);
 
         //Parameters a buscar
-        $this->addSearchFields($viewName, ["sector", "colonia", "manzana", "lote"]);
+        $this->addSearchFields($viewName, [  'codlote' ]);
     }
 }

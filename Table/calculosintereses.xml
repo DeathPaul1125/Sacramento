@@ -22,6 +22,10 @@
         <type>double precision</type>
     </column>
     <column>
+        <name>cuotaletras</name>
+        <type>character varying(50)</type>
+    </column>
+    <column>
         <name>cuotas</name>
         <type>integer</type>
     </column>    
@@ -40,6 +44,10 @@
     <column>
         <name>enganche</name>
         <type>double precision</type>
+    </column>    
+    <column>
+        <name>engancheletras</name>
+        <type>character varying(50)</type>
     </column>
     <column>
         <name>fechacuota</name>
@@ -101,6 +109,10 @@
     <column>
         <name>saldoconint</name>
         <type>double precision</type>
+    </column>    
+    <column>
+        <name>saldoconintletras</name>
+        <type>character varying(150)</type>
     </column>
     <column>
         <name>saldosinint</name>

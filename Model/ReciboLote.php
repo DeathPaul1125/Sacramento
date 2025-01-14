@@ -73,6 +73,20 @@ class ReciboLote extends ModelClass
     {
         return "recibolote";
     }
+
+    public function primaryDescription(): string
+    {
+        return "Sector " . $this->getLote()->sector . " Manzana " . $this->getLote()->manzana . " Lote " . $this->getLote()->lote;   
+    }
+
+     //Cargamos la información del lote
+     public function getLote(): Lote
+     {
+         $lote = new Lote();
+         $lote->loadFromCode($this->codlote);
+         return $lote;
+     }
+     
     public static function tableName(): string
     {
         return "reciboslotes";

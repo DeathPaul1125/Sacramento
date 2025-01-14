@@ -5,7 +5,7 @@
             <widget type="text" fieldname="id" readonly="true"/>
         </column>
         <column name="codlote" display="left" order="100">
-            <widget type="autocomplete" fieldname="codlote" readonly="dinamic">
+            <widget type="autocomplete" fieldname="codlote" readonly="dinamic" onclick="EditLote">
                 <values source="lotes" fieldcode="id" fieldtitle="codlote"/>
             </widget>
         </column>
@@ -15,7 +15,7 @@
         <column name="lecturat" display="left" order="130">
             <widget type="number" fieldname="lecturat" decimal="0"/>
         </column>
-        <column name="creation-date" display="none" order="150">
+        <column name="creation-date" display="left" order="150">
             <widget type="datetime" fieldname="creation_date" required="true"/>
         </column>
         <column name="user" order="160" display="none">

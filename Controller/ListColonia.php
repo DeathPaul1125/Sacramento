@@ -22,6 +22,13 @@ class ListColonia extends ListController
     protected function createViewsColonia(string $viewName = "ListColonia"): void
     {
         $this->addView($viewName, "Colonia", "Colonias", "fas fa-home");
+
+        $colonias = $this->codeModel->all('colonias', 'id', 'nombre');
+        $this->addFilterSelect($viewName, 'id', 'Colonias', 'id', $colonias);
+        
+
+        //Parameters a buscar
+        $this->addSearchFields($viewName, ['nombre']);
         
         // Esto es un ejemplo ... Debe de cambiarlo según los nombres de campos del modelo
         // $this->addOrderBy($viewName, ["id"], "id", 2);

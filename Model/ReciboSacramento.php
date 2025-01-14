@@ -80,4 +80,19 @@ class ReciboSacramento extends ModelClass
         }
         $this->total = $total;
     }
+
+    protected function saveInsert(array $values = []): bool
+    {
+        if (empty($this->id)) {
+            $this->id = (string)$this->newCode();
+        }
+
+        $return = parent::saveInsert($values);
+        $id = $this->id;
+       // $idplan->save();
+       
+       
+        return $return;
+    }
+   
 }

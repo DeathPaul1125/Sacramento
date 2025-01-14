@@ -45,13 +45,13 @@
         </group>
         <group name="agua" numcolumns="6" title="Agua" icon="fas fa-faucet">
             <column name="pagua" display="left" order="100" numcolumns="3">
-                <widget type="select" fieldname="pagua">
+                <widget type="select" fieldname="pagua" required="true">
                     <values title="Si">1</values>
                     <values title="No">0</values>
                 </widget>
             </column>
             <column name="cortado" display="left" order="105" numcolumns="3">
-                <widget type="select" fieldname="cortado">
+                <widget type="select" fieldname="cortado" required="true">
                     <values title="Si">1</values>
                     <values title="No">0</values>
                 </widget>
@@ -63,7 +63,7 @@
                 <widget type="text" fieldname="contador" maxlength="50"/>
             </column>
             <column name="suspendido" display="left" order="155" numcolumns="3">
-                <widget type="select" fieldname="suspendido">
+                <widget type="select" fieldname="suspendido" required="true">
                     <values title="Si">1</values>
                     <values title="No">0</values>
                 </widget>
@@ -86,7 +86,7 @@
                 <widget type="text" fieldname="medidagen" maxlength="20"/>
             </column>
             <column name="tipo" display="left" order="125" numcolumns="4">
-                <widget type="select" fieldname="tipo">
+                <widget type="select" fieldname="tipo" required="true">
                     <values title="Lote">1</values>
                     <values title="Casa">2</values>
                 </widget>
@@ -100,13 +100,13 @@
                 <widget type="money" fieldname="preciom"/>
             </column>
             <column name="escriturado" display="left" order="110" numcolumns="4">
-                <widget type="select" fieldname="escriturado">
+                <widget type="select" fieldname="escriturado" required="true">
                     <values title="Si">1</values>
                     <values title="No">2</values>
                 </widget>
             </column>
             <column name="sefactura" display="left" order="115" numcolumns="4">
-                <widget type="select" fieldname="sefactura">
+                <widget type="select" fieldname="sefactura" required="true">
                     <values title="Si">1</values>
                     <values title="No">0</values>
                 </widget>
